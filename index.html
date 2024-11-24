@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    /> 
+    <!--personal css--> 
+    <link rel="stylesheet" href="/index.css" /> 
+
+    <title>KITAAB-KHAANA: kitaabon ka khajaana </title>
+  </head>
+  <body> 
+
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark " > 
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html" ><img src="./homepage.JPG" height="50" alt="homepage"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" target="_blank" href="./about.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact us </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> 
+            <!-- LOGIN  -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdropA">
+    Login 
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdropA" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropALabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropALabel">LOGIN FORM </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form onsubmit ="return validation()"> 
+                <div class="form-group" >
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" placeholder="enter valid email-id" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> 
+              </form>
+        </div>
+        <div class="modal-footer"> 
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Login</button> 
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <!--SIGN UP modal   -->
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdropB">
+                Sign up 
+              </button>
+              
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdropB" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropBLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropBLabel">SIGN-UP FORM </h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form onsubmit ="return validation()" name="signupform" id="form-sheet01" > 
+                            <div class="form-group"> 
+                                <div class="mb-3">
+                                    <label for="exampleInput1" class="form-label">Name</label>
+                                    <input name="NAME"  type="text" class="form-control" id="exampleInput1">
+                                    <span id="error-name" style="color: red; font-size: 10px;"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInput2" class="form-label">Contact Number</label>
+                                    <input name="NUMBER" type="number" class="form-control" id="exampleInput2">
+                                    <span id="error-number" style="color: red; font-size: 10px;"></span>
+                                </div> 
+                              <label for="exampleInputEmail1">Email address</label>
+                              <input name="EMAIL_ID"type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                              <span id="error-number" style="color: red; font-size: 10px;"></span>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input  type="password" class="form-control" id="exampleInputPassword1">
+                              <span id="error-password" style="color: red; font-size: 10px;"></span> 
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword2">Confirm Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword2"> 
+                              <span id="error-vpassword" style="color: red; font-size: 10px;"></span> 
+                              <br><br><hr> 
+                              
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" id="submit01">Create Kitaab-khaana Account </button> 
+                              </div>
+
+
+
+
+
+                              
+                            </div> 
+                          </form> 
+                    </div>
+                    
+                  </div>
+                </div>
+              </div> 
+
+
+
+
+
+        </div>
+    </nav>
+
+ 
+  
+
+
+<!--carousel--> 
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" >
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner height="100">
+      <div class="carousel-item active">
+        <img src="./darkacademia1.JPG" class="d-block w-100" alt="..." height="400">
+        <div class="carousel-caption d-none d-md-block">
+          <h2><b><ul>Welcome to KITAAB-KHAANA </ul></b></h2>
+          <p>KITAAB-KHAANA : kitaabon ka khajaana  </p>
+          <button class="btn btn-primary">fiction</button>
+          <button class="btn btn-success">autobiography</button>
+          <button class="btn btn-danger">fantasy</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./pa.JPG" class="d-block w-100" alt="..." height="400">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Welcome to KITAAB-KHAANA </h2>
+          <p>KITAAB-KHAANA : kitaabon ka khajaana  </p>
+          <button class="btn btn-primary">non-fiction</button>
+          <button class="btn btn-success">crime thrillers </button>
+          <button class="btn btn-danger">romance</button> 
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./monet'spainting01.JPG" class="d-block w-100" alt="..." height="400">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Welcome to KITAAB-KHAANA </h2>
+          <p>KITAAB-KHAANA : kitaabon ka khajaana  </p> 
+          <button class="btn btn-primary">contemporary</button>
+          <button class="btn btn-success">artsy</button>
+          <button class="btn btn-danger">self-help</button> 
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div> 
+<!--alert--> 
+<div class="alert alert-warning alert-dismissible fade show " role="alert">
+    <h4 class="alert-heading">NAMASTE !! </h4>
+    <strong><p>Before clicking on BUY NOW;make sure you are signed in <br><hr>
+    <b>NOTE</b>: ALL the books shown are of same standard size : 4.25"x6.87"  </p> </strong> 
+    <hr>
+    <p class="mb-0">KITAAB-KHAANA : kitaabon ka khajaana </p>
+    
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>  
+</div> 
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    --> 
+    
+    <!--items existential crisis -->
+    <br> 
+ <div><b><h2>Existential crisis? : <span class="badge text-bg-warning">New</span> </h2> </b><hr>
+    <div class="row row-cols-1 row-cols-md-5 g-5">
+        <div class="col">
+          <div class="card h-100 shadow">
+            <img src="./the secret history.JPG" class="card-img-top" alt="..." >
+            <div class="card-body">
+              <h5 class="card-title"><b>THE SECRET HISTORY</b></h5> 
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">500 RUPEES </button> 
+                <br><hr>Under the influence of their charismatic classics professor, a group of clever, eccentric misfits at an elite New England college discover a way of thinking and living that is a world away from the humdrum existence of their contemporaries. But when they go beyond the boundaries of normal morality their lives are changed profoundly and for ever. </p> 
+                
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                More details 
+                </button> 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>Under the influence of their charismatic classics professor, a group of clever, eccentric misfits at an elite New England college discover a way of thinking and living that is a world away from the humdrum existence of their contemporaries. But when they go beyond the boundaries of normal morality their lives are changed profoundly and for ever.</p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>“Death is the mother of beauty,” said Henry. “And what is beauty?” “Terror.” “Well said,” said Julian. “Beauty is rarely soft or consolatory. Quite the contrary. Genuine beauty is always quite alarming.”<br><hr>
+        "What are the dead, anyway, but waves and energy? Light shining from a dead star?" </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Donna Tartt, born in 1963, is an American novelist, writer, and critic. She is the winner of the 2014 Pulitzer Prize (Fiction) for The Goldfinch. The author won the 2003 WH Smith Literary Award for The Little Friend. She was born in Greenwood, Mississippi. Tartt joined the University of Mississippi in 1981, but transferred to Bennington College one year later, from where she graduated in 1986. The author’s literary works follow themes such as social stratification, guilt, and aesthetic beauty. Tartt now lives in New York City.</p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a class="btn btn-primary" href="./buy.html" role="button">Buy now</a> 
+          
+
+
+
+
+
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Modern Classic </small>
+            </div>
+          </div> 
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow ">
+            <img src="./the unabridged novels of sylvia plath.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">THE UNABRIDGED JOURNALS OF SYLVIA PLATH </h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">700 RUPEES </button> 
+                <br><hr>Sylvia Plath's journals were originally published in 1982 in a heavily abridged version authorized by Plath's husband, Ted Hughes. This new edition is an exact and complete transcription of the diaries Plath kept during the last twelve years of her life. Sixty percent of the book is material that has never before been made public, more fully revealing the intensity of the poet's personal and literary struggles, and providing fresh insight into both her frequent desperation and the bravery with which she faced down her demons. </p> 
+             <!-- Button trigger modal -->
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                More details 
+             </button>  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop2Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>Sylvia Plath's journals were originally published in 1982 in a heavily abridged version authorized by Plath's husband, Ted Hughes. This new edition is an exact and complete transcription of the diaries Plath kept during the last twelve years of her life. Sixty percent of the book is material that has never before been made public, more fully revealing the intensity of the poet's personal and literary struggles, and providing fresh insight into both her frequent desperation and the bravery with which she faced down her demons. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>Entirety of this journal is filled with exceptional writings. </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Sylvia Plath was born in 1932 in Massachusetts. Her books include the poetry collections The Colossus, Crossing the Water, Winter Trees, Ariel, and The Collected Poems, which won the Pulitzer Prize. Plath is credited with being a pioneer of the 20th-century style of writing called confessional poetry. Her poem "Daddy" is one of the best-known examples of this genre.
+
+            In 1963, Plath's semi-autobiographic novel The Bell Jar was published under the pseudonym "Victoria Lucas"; it was reissued in 1966 under her own name. A complete and uncut facsimile edition of Ariel was published in 2004 with her original selection and arrangement of poems. She was married to the poet Ted Hughes, with whom she had a daughter, Frieda, and a son, Nicholas. She died in London in 1963. </p>
+        
+        </div> 
+
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>                             
+
+           
+            <div class="card-footer">
+              <small class="text-body-secondary">Tortured Poets Department </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow ">
+            <img src="./metamorphosis.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">METAMORPHOSIS</h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">600 RUPEES </button> 
+                <br><hr> 'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.' Thus begins The Metamorphosis, cited as one of the seminal works of fiction of the twentieth century. A story of Gregor Samsa, a travelling salesman, who wakes up one day to discover that he has metamorphosed into a bug</p> 
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+                More details 
+                </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop3Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>'One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.' Thus begins The Metamorphosis, cited as one of the seminal works of fiction of the twentieth century. A story of Gregor Samsa, a travelling salesman, who wakes up one day to discover that he has metamorphosed into a bug, The Metamorphosis is a book that concerns itself with the themes of alienation, disillusionment and existentialism. As Samsa struggles to reconcile his humanity with his transformation, Kafka, very deftly, weaves his readers into a web that deals with the absurdity of existence, the alienating experience of modern life and the cruelty and incomprehensibility of authoritarian power, leaving them at once stunned and impressed.</p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>“Was he an animal, that music could move him so? He felt as if the way to the unknown nourishment he longed for were coming to light.”
+            <b>― Franz Kafka, Metamorphosis</b> </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>An icon of twentieth-century literature, Franz Kafka was born on July 3, 1883, into a middle-class, German family in Prague. Never famous in his own lifetime, most of Kafka's works were published and translated only during the 1920s and 1930s and almost instantly, they became cult texts of modern literature. The Judgment, The Metamorphosis and Amerika were all written in 1912 while The Trial, Kafka's most famous novel, was written in 1914. Kafka died of tuberculosis in 1924. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+            
+            <div class="card-footer">
+              <small class="text-body-secondary">BIG hug </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow ">
+              <img src="./crime and punishment.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">CRIME AND PUNISHMENT</h5>
+                <p class="card-text">PRICE: <button type="button" class="btn btn-warning">300 RUPEES </button> 
+                    <br><hr>Immerse yourself in the dark and psychological depths of Crime and Punishment by Fyodor Dostoevsky. Follow the tormented Raskolnikov as he grapples with guilt, morality, and the consequences of his actions in this gripping masterpiece of Russian literature. </p> 
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+                    More details 
+                    </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop4Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>Immerse yourself in the dark and psychological depths of Crime and Punishment by Fyodor Dostoevsky. Follow the tormented Raskolnikov as he grapples with guilt, morality, and the consequences of his actions in this gripping masterpiece of Russian literature.
+
+            A gripping psychological thriller!
+            
+            Fyodor Dostoevsky's compelling exploration of guilt, redemption, and the human psyche
+            Gripping portrayal of a troubled protagonist caught in a web of his own crimes
+            Examines themes of morality, justice, and the nature of evil
+            Richly drawn characters and an atmospheric setting that immerse readers in 19th-century Russia
+            A timeless classic that delves into the complexities of the human condition with unparalleled depth and intensity</p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>“I did not bow down to you, I bowed down to all the suffering of humanity.”<br>
+            “The man who has a conscience suffers whilst acknowledging his sin. That is his punishment.”
+            <b>― Fyodor Dostoyevsky, Crime and Punishment</b></p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Dostoyevsky was the son of a doctor. His parents were very hard-working and deeply religious people, but so poor that they lived with their five children in only two rooms. The father and mother spent their evenings in reading aloud to their children, generally from books of a serious character.
+            In 1861, he started a journal—Vremya, which was forbidden by the Censorship through a misunderstanding. In 1864 he lost his first wife and his brother Mihail. He was in terrible poverty, yet he took upon himself the payment of his brother’s debts. He started another journal—The Epoch, which within a few months was also prohibited. He was weighed down by debt, his brother’s family was dependent on him, he was forced to write at heart-breaking speed, and is said never to have corrected his work.
+            In June 1880 he made his famous speech at the unveiling of the monument to Pushkin in Moscow and he was received with extraordinary demonstrations of love and honour.
+            A few months later Dostoevsky died. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+             
+              <div class="card-footer">
+                <small class="text-body-secondary">For the Psychos</small>
+              </div>
+            </div>
+        </div> 
+        <div class="col">
+            <div class="card h-100 shadow ">
+              <img src="./the stranger.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><b>THE STRANGER</b></h5>
+                <p class="card-text">PRICE: <button type="button" class="btn btn-warning">200 RUPEES </button> 
+                    <br><hr>The classic literary masterpiece The Stranger (Vintage International) is a story about an Algerian, Meursault, the titular character who commits a murder after attending his mothers funeral. His understanding of the world, his emotional spectrum, and the general absurdities of the time all combine to form a compelling read. </p> 
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">
+                    More details 
+                    </button> 
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop5Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop5Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>The classic literary masterpiece The Stranger (Vintage International) is a story about an Algerian, Meursault, the titular character who commits a murder after attending his mothers funeral. His understanding of the world, his emotional spectrum, and the general absurdities of the time all combine to form a compelling read.
+
+            The story is aptly divided into two riveting sections, both told from the perspective of Meursault, who gives us his views before the murder in the first section and later walks us through his state of mind after the murder in the second section. The two parts in this thrilling novel encompass the protagonists mindset through the ordeal of grieving for his mothers death while also coming face to face with his own moral compass for committing a murder.
+            
+            The Stranger (Vintage International) is often cited as one of the finest examples of the philosophy of the absurd. The sense of culture and various human values interwoven during the turbulent pre-modern era is also best captured in the contents of this novel. This books was published by Vintage as reissue edition in 1989 and is available in paperback. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>“Have you no hope at all? And do you really live with the thought that when you die, you die, and nothing remains?" "Yes," I said.”
+         <b>― Albert Camus, The Stranger</b> </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Albert Camus (French: [albɛʁ kamy]; 7 November 1913 - 4 January 1960) was a French philosopher, author, and journalist. His views contributed to the rise of the philosophy known as absurdism. He wrote in his essay The Rebel that his whole life was devoted to opposing the philosophy of nihilism while still delving deeply into individual freedom. He won the Nobel Prize in Literature in 1957.
+
+            Camus did not consider himself to be an existentialist despite usually being classified as one, even in his lifetime. In a 1945 interview, Camus rejected any ideological associations: ""No, I am not an existentialist. Sartre and I are always surprised to see our names linked..."".
+            
+            Camus was born in Algeria to a Pied-Noir family, and studied at the University of Algiers from which he graduated in 1936. In 1949, Camus founded the Group for International Liaisons to ""denounce two ideologies found in both the USSR and the USA"". </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+             
+              <div class="card-footer">
+                <small class="text-body-secondary">French literature at it's finest </small>
+              </div>
+            </div>
+        </div>  
+    </div> 
+</div>
+    <br><hr> 
+    
+    
+    <!--Girl dinner --> 
+ <div><h2>Girl Dinner : </h2>
+    <div class="row row-cols-1 row-cols-md-5 g-5">
+        <div class="col">
+          <div class="card h-100 shadow ">
+            <img src="./and then there were none.JPG" class="card-img-top" alt="..." >
+            <div class="card-body">
+              <h5 class="card-title">AND THEN THERE WERE NONE</h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">900 RUPEES </button> 
+                <br><hr> Europe teeters on the brink of war. Ten strangers are invited to Soldier Island, an isolated rock near the Devon coast. Cut off from the mainland, with their generous hosts Mr and Mrs U.N. Owen mysteriously absent, they are each accused of a terrible crime. When one of the party dies suddenly they realise they may be harbouring a murderer among their number.
+             </p> 
+
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">
+    More details 
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop6Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop6Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>The book that topped the international online poll held in Agatha Christies 125th birthday year to discover which of her 80 crime books was the worlds favourite.
+
+            1939. Europe teeters on the brink of war. Ten strangers are invited to Soldier Island, an isolated rock near the Devon coast. Cut off from the mainland, with their generous hosts Mr and Mrs U.N. Owen mysteriously absent, they are each accused of a terrible crime. When one of the party dies suddenly they realise they may be harbouring a murderer among their number.
+            
+            The 10 strangers include a reckless playboy, a troubled Harley Street doctor, a formidable judge, an uncouth detective, an unscrupulous mercenary, a God-fearing spinster, two restless servants, a highly decorated general and an anxious secretary. One by one they are picked off. Who will survive? And who is the killer? Copies of an ominous nursery rhyme hang in each room, the murders mimicking the awful fates of its Ten Little Soldier Boys.
+            
+            The clear winner in an international online poll held to discover the worlds favourite Agatha Christie book, this new paperback also coincides with a new 3-part BBC TV adaptation featuring a stellar ensemble cast: Douglas Booth, Charles Dance, Maeve Dermody, Burn Gorman, Anna Maxwell Martin, Sam Neill, Miranda Richardson, Toby Stephens, Noah Taylor and Aidan Turner. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>“I don't know. I don't know at all. And that's what's frightening the life out of me. To have no idea....” <br> 
+            “I have, let me confess it in all humility, a pitiful human wish that someone should know just how clever I have been” 
+            <b>― Agatha Christie, And Then There Were None </b>
+        </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Agatha Christie was born in Torquay in 1890 and became, quite simply, the bestselling novelist in history. Her first novel, The Mysterious Affair at Styles, written towards the end of the First World War, introduced us to Hercule Poirot, who was to become the most popular detective in crime fiction since Sherlock Holmes. She is known throughout the world as the Queen of Crime. Her books have sold over a billion copies in the English language and another billion in over 100 foreign countries. She is the author of 80 crime novels and short story collections, 19 plays and six novels under the name of Mary Westmacott.</p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div>
+  </div> 
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Now this is how you write CRIME-THRILLERS </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow ">
+            <img src="./the song of achilles.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">THE SONG OF ACHILLES</h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">200 RUPEES </button> 
+                <br><hr>this book sings of Achilles and Patroclus, two young boys, one a legend and one merely his lover, caught in the whirlwind and tragedy of their times. You don't read such books in sultry weather and crowded trains; no, you read them lain on the grass, beneath a sky full of stars, moths and butterflies flickering around even as the bonfire sends sparks up the balmy evening air. Oh well, I wasn't fortunate enough so I took what I had and breezed through this book, squeezed among fellow passengers.
+            </p> 
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop7">
+                More details 
+                </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop7Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop7Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>Winner of the Orange women's Prize for fiction The international sensation a Sunday Times and new York Times bestseller 'captivating' Donna tartt 'I loved it' J K Rowling 'ravishingly vivid' Emma Donoghue Greece in the age of heroes. Patroclus, an awkward young prince, has been exiled to the court of King Peleus and his perfect son Achilles. Despite their differences, Achilles befriends the shamed prince, and as they grow into young men skilled in the arts of war and medicine, their bond blossoms into something deeper - despite the displeasure of achilles's mother thetis, a cruel sea goddess. But when word comes that Helen of Sparta has been kidnapped, Achilles must go to war in distant Troy and fulfil his destiny. Torn between love and fear for his friend, Patroclus goes with him, little knowing that the years that follow will test everything they hold dear. 'A book I could not put down' Ann Patchett ?an exciting, sexy, violent Superman version of the Iliad? guardian ?sexy, dangerous, mystical? Bettany Hughes. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>“I will never leave him. It will be this, always, for as long as he will let me.
+            If I had had words to speak such a thing, I would have. But there were none that seemed big enough for it, to hold that swelling truth.
+            As if he had heard me, he reached for my hand. I did not need to look; his fingers were etched into my memory, slender and petal-veined, strong and quick and never wrong.
+            “Patroclus,” he said. He was always better with words than I.” <br>
+            "The never-ending ache of love and sorrow. Perhaps in some other life I could have refused, could have torn my hair and screamed, and made him face his choice alone." 
+        <b>― Madeline Miller, The Song of Achilles </b></p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Madeline Miller grew up in New York City and Philadelphia. She attended Brown University, where she earned her BA and MA in Classics. She has taught and tutored Latin, Greek, and Shakespeare to high school students for over fifteen years. She has also studied at the University of Chicago’s Committee on Social Thought, and in the Dramaturgy department at Yale School of Drama, where she focused on the adaptation of classical texts to modern forms.
+
+            The Song of Achilles, her first novel, was awarded the 2012 Orange Prize for Fiction and was a New York Times Bestseller. Her second novel, Circe, was an instant number 1 New York Times bestseller, and won the Indies Choice Best Adult Fiction of the Year Award and the Indies Choice Best Audiobook of the Year Award, as well as being shortlisted for the 2019 Women's Prize for Fiction. Circe also won The Red Tentacle Award, an American Library Association Alex Award (adult books of special interest to teen readers), and the 2018 Elle Big Book Award. Miller's novels have been translated into over twenty-five languages including Dutch, Mandarin, Japanese, Turkish, Arabic and Greek, and her essays have appeared in a number of publications including the Guardian, Wall Street Journal, Washington Post, Telegraph, Lapham's Quarterly and NPR.org. Most recently, she has published a standalone short story, Galatea. She currently lives outside Philadelphia, Pennsylvania. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+                         
+            <div class="card-footer">
+              <small class="text-body-secondary">Oh to be loved </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow ">
+            <img src="./emma jane austen.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">EMMA</h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">100 RUPEES </button> 
+                <br><hr>Emma Woodhouse, handsome, clever, rich - and fiercely independent - is perfectly content with her life and sees no need for either love or marriage. Nothing, however, delights her more than interfering in the romantic lives of others. </p> 
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop8">
+                More details 
+                </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop8Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop8Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>Emma Woodhouse, handsome, clever, rich - and fiercely independent - is perfectly content with her life and sees no need for either love or marriage. Nothing, however, delights her more than interfering in the romantic lives of others. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>"He was a nervous man, easily depressed; fond of every body that he was used to, and hating to part with them; hating change of every kind." <br> 
+            "The real evils, indeed, of Emma’s situation were the power of having rather too much her own way, and a disposition to think a little too well of herself; these were the disadvantages which threatened alloy to her many enjoyments. " 
+        <b>-Jane Austen,EMMA </b></p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Jane Austen, the daughter of a clergyman, was born in Hampshire in 1775, and later lived in Bath and the village of Chawton. As a child and teenager, she wrote brilliantly witty stories for her family's amusement, as well as a novella, Lady Susan. Her first published novel was Sense and Sensibility, which appeared in 1811 and was soon followed by Pride and Prejudice, Mansfield Park and Emma. Austen died in 1817, and Persuasion and Northanger Abbey were published posthumously in 1818. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+             
+
+            
+            <div class="card-footer">
+              <small class="text-body-secondary">I'm just a girl </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow ">
+              <img src="./kim jinyoung born 1982.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">KIM JIYOUNG : BORN 1982 </h5>
+                <p class="card-text">PRICE: <button type="button" class="btn btn-warning">500 RUPEES </button> 
+                    <br><hr>Kim Jiyoung is a girl born to a mother whose in-laws wanted a boy. Kim Jiyoung is a sister made to share a room while her brother gets one of his own.
+                    Kim Jiyoung is a female preyed upon by male teachers at school. Kim Jiyoung is a daughter whose father blames her when she is harassed late at night.                    
+                    Kim Jiyoung is a good student who doesn’t get put forward for internships. Kim Jiyoung is a model employee but gets overlooked for promotion. Kim Jiyoung is a wife who gives up her career and independence for a life of domesticity.</p> 
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop9">
+                    More details 
+                    </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop9Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop9Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>'This witty, disturbing book deals with sexism, mental health issues and the hypocrisy of a country where young women are “popping caffeine pills and turning jaundiced” as they slave away in factories helping to fund higher education for male siblings. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>“The world had changed a great deal, but the little rules, contracts and customs had not, which meant the world hadn't actually changed at all.”
+            ― Cho Nam-Joo, 82년생 김지영
+        <br>“While offenders were in fear of losing a small part of their privilege, the victims were running the risk of losing everything.”
+        ― Cho Nam-Joo, Kim Jiyoung, Born 1982 </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Cho Nam-joo is a Korean writer and author. She is best known for her 2016 novel Kim Ji-young, Born 1982, which has sold more than a million copies and is often credited with propelling a feminist movement in South Korea. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+             
+
+             
+              <div class="card-footer">
+                <small class="text-body-secondary">WOMEN</small> 
+              </div>
+            </div>
+        </div> 
+        <div class="col">
+            <div class="card h-100 shadow ">
+              <img src="./love and the other words.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LOVE AND THE OTHER WORDS</h5>
+                <p class="card-text">PRICE: <button type="button" class="btn btn-warning">60 RUPEES </button> 
+                    <br><hr>Filled with high jinks, pop-culture references, and grin-inducing flirtation, it's truly a romance for the 21st century. A smart, sexy romance for readers who thrive on girl power
+
+                    Lauren channels the elements of beloved romantic comedies... the dual perspectives of Evie and Carter will have readers ripping through the book to find out if these two can work things out
+                    
+                    The stellar writing team behind Christina Lauren is back in top form in this light, funny and unflinchingly honest stand-alone novel about growing up, standing up and falling in love
+                    
+                    Will we ever stop falling in love with Christina Lauren's fictional men? The answer to this is HECK NO
+                </p> 
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop10">
+                    More details 
+                    </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop10Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop10Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>Macy Sorensen is settling into an ambitious if emotionally tepid routine: work hard as a new paediatrics resident, plan her wedding to an older, financially secure man, keep her head down and heart tucked away.
+
+            But when she runs into Elliot Petropoulos - the first and only love of her life - the careful bubble she's constructed begins to dissolve. Once upon a time, Elliot was Macy's entire world - growing from her gangly teen friend into the man who coaxed her heart open again after the loss of her mother . . . only to break it on the very night he declared his love for her.
+            
+            Told in alternating timelines between Then and Now, teenage Elliot and Macy grow from friends to much more - spending weekends and lazy summers together reading books, sharing favourite words, and talking through their growing pains and triumphs. As adults, they have become strangers to one another until their chance reunion. Although their memories are obscured by the agony of what happened that night so many years ago, Elliot will come to understand the truth behind Macy's decade-long silence, and will have to overcome the past and himself to revive her faith in the possibility of an all-consuming love.
+            
+            The heart-breaking and heart-warming read from No. 1 international bestselling author Christina Lauren, author of Dating You, Hating You and Josh and Hazel's Guide to Not Dating. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>“Why can’t everyone be like you?” “I can be enough of your world that it feels like everyone is.” <br> 
+            “Limerence.” There’s no other word like it: The state of being infatuated with another person." 
+        </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Christina Lauren, the combined pen name of Christina Hobbs and Lauren Billings, is an American author duo of contemporary fiction, teen fiction and romance novels. </p>
+        
+        </div>
+        <div class="modal-footer"> 
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+                          
+              <div class="card-footer">
+                <small class="text-body-secondary">Hopeless romantic </small>
+              </div>
+            </div>
+        </div>  
+      </div> 
+</div> 
+<br><hr>  
+    <!--contemporary nilhism  --> 
+ <div><h2>contemporary nilhism : </h2>
+    <div class="row row-cols-1 row-cols-md-5 g-5">
+        <div class="col">
+          <div class="card h-100 shadow ">
+            <img src="./a man called ove.JPG" class="card-img-top" alt="..." >
+            <div class="card-body">
+              <h5 class="card-title">A MAN CALLED OVE </h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">900 RUPEES </button> 
+                <br><hr>The book is the story of, of course, a man called Ove. He’s 59, extremely grumpy, hates change, has lost his job because of age, and is uncomfortable with modern technology, bureaucrats, and even coffee machines. He hates people who trade their Swedish cars for an Audi or a BMW. But Ove has several redeeming characteristics too. He is honest as when he returns a lost wallet at the age of 9, he has high principles and sticks to them, and has abiding love for his wife, Sonja. Mainly, while he will never admit it, he has a soft heart as shown by his interactions with his Iranian neighbour Parveneh and her children, with his friend turned foe Rune, with some local youth, and with a cat that he has been made to adopt. </p> 
+
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop11">
+    More details 
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop11Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop11Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>The million-copy bestselling phenomenon, Fredrik Backman's heartwarming debut is a funny, moving, uplifting tale of love and community that will leave you with a spring in your step. Perfect for fans of Rachel Joyce's The Unlikely Pilgrimage of Harold Fry, Graeme Simsion's The Rosie Project and David Nicholl's US. New York Times bestseller'Warm, funny, and almost unbearably moving' Daily Mail'Rescued all those men who constantly mean to read novels but never get round to it' Spectator Books of the YearAt first sight, Ove is almost certainly the grumpiest man you will ever meet. He thinks himself surrounded by idiots - neighbours who can't reverse a trailer properly, joggers, shop assistants who talk in code, and the perpetrators of the vicious coup d'etat that ousted him as Chairman of the Residents' Association. He will persist in making his daily inspection rounds of the local streets. But isn't it rare, these days, to find such old-fashioned clarity of belief and deed? Such unswerving conviction about what the world should be, and a lifelong dedication to making it just so?In the end, you will see, there is something about Ove that is quite irresistible. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p></p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Fredrik Backman is a Swedish blogger, columnist and author. His debut novel A MAN CALLED OVE was a number 1 bestseller across Scandinavia, has sold over one million copies worldwide, was a Richard & Judy summer read in the UK and an instant New York Times paperback bestseller, and has been made into an acclaimed film. Fredrik's subsequent novels, MY GRANDMOTHER SENDS HER REGARDS AND APOLOGISES and BRITT-MARIE WAS HERE, also went straight to number 1 in Sweden on publication. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div>
+  </div> 
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow ">
+            <img src="./norwegian woods.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">NORWEGIAN WOODS</h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">250 RUPEES </button> 
+                <br><hr>Read the haunting love story that turned Murakami into a literary superstar. When he hears her favourite Beatles song, Toru Watanabe recalls his first love Naoko, the girlfriend of his best friend Kizuki. Immediately he is transported back almost twenty years to his student days in Tokyo, adrift in a world of uneasy friendships, casual sex, passion, loss and desire - to a time when an impetuous young woman called Midori marches into his life and he has to choose between the future and the past. </p> 
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop12">
+                More details 
+                </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop12" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop12Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop12Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>Read the haunting love story that turned Murakami into a literary superstar. When he hears her favourite Beatles song, Toru Watanabe recalls his first love Naoko, the girlfriend of his best friend Kizuki. Immediately he is transported back almost twenty years to his student days in Tokyo, adrift in a world of uneasy friendships, casual sex, passion, loss and desire - to a time when an impetuous young woman called Midori marches into his life and he has to choose between the future and the past. 'Evocative, entertaining, sexy and funny; but then Murakami is one of the best writers around' Time Out 'Such is the exquisite, gossamer construction of Murakami's writing that everything he chooses to describe trembles with symbolic possibility' Guardian 'This book is undeniably hip, full of student uprisings, free love, booze and 1960s pop, it's also genuinely emotionally engaging, and describes the highs of adolescence as well as the lows' Independent on Sunday </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>“Death exists, not as the opposite but as a part of life.” </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Haruki Murakami is a world famous Japanese novelist. His many evocative and poignant works are focused around the themes of alienation, surrealism and nihilism and most are worldwide bestsellers. He has won The World Fantasy Award, The International Short Story Award, The Franz Kafka Prize and The Jerusalem prize, amongst several others. An important figure in postmodern literature, some of his classics include The Wind-Up Bird Chronicle, What I Talk about when I Talk about Running, Blind Willow, Sleeping Woman, Kafka on the Shore. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div> 
+
+             
+            <div class="card-footer"> 
+              <small class="text-body-secondary">The BEATTLES </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow">
+            <img src="./born a crime.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">490 RUPEES </button> 
+                <br><hr>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> 
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop13">
+                More details 
+                </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop13" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop13Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop13Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p></p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>“The way my mother always explained it, the traditional man wants a woman to be subservient, but he never falls in love with subservient women. He's attracted to independent women. "He's like an exotic bird collector," she said. "He only wants a woman who is free because his dream is to put her in a cage.”  
+            <br>"Relationships are built in the silences. You spend time with people, you observe them and interact with them, and you come to know them"<BR><b>― Trevor Noah, Born a Crime: Stories From a South African Childhood</b></p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Born under apartheid to a black South African mother and a white European father, Trevor Noah's improbable rise to stardom led to his sold-out one-man show at the 2012 Edinburgh Fringe Festival that became one of the most talked-about shows at the festival that year. He has appeared on QI, 8 Out of 10 Cats, The Royal Variety Performance and Live at the Apollo. In 2015 Noah succeeded Jon Stewart as host of The Daily Show. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+             
+            <div class="card-footer">
+              <small class="text-body-secondary">Started for Trevor,Finished it off for his MUM </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow ">
+              <img src="./the kite runner.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">THE KITE RUNNER</h5>
+                <p class="card-text">PRICE: <button type="button" class="btn btn-warning">700 RUPEES </button> 
+                    <br><hr>Afghanistan, 1975: Twelve-year-old Amir is desperate to win the local kite-fighting tournament and his loyal friend Hassan promises to help him. But neither of the boys can foresee what will happen to Hassan that afternoon, an event that is to shatter their lives. After the Russians invade and the family is forced to flee to America, Amir realises that one day he must return to Afghanistan under Taliban rule to find the one thing that his new world cannot grant him: redemption. </p> 
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop14">
+                    More details 
+                    </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop14" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop14Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop14Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>Afghanistan, 1975: Twelve-year-old Amir is desperate to win the local kite-fighting tournament and his loyal friend Hassan promises to help him. But neither of the boys can foresee what will happen to Hassan that afternoon, an event that is to shatter their lives. After the Russians invade and the family is forced to flee to America, Amir realises that one day he must return to Afghanistan under Taliban rule to find the one thing that his new world cannot grant him: redemption. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>"And maybe, just maybe, I would finally be pardoned for killing my mother."<br> 
+        "And that’s the thing about people who mean everything they say. They think everyone else does too." </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Khaled Hosseini was born in Kabul, Afghanistan and moved to the United States in 1980. His first novel, The Kite Runner, was an international bestseller, published in thirty-four countries. In 2006 he was named a US goodwill envoy to the United Nations Refugee Agency. He lives in northern California. </p>
+        
+        </div>
+        <div class="modal-footer"> 
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+             
+              <div class="card-footer">
+                <small class="text-body-secondary">Tissues PART 1 </small>
+              </div>
+            </div>
+        </div> 
+        <div class="col"> 
+            <div class="card h-100 shadow ">
+              <img src="./the thousand splendid suns.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">THE THOUSAND SPLENDID SUNS</h5>
+                <p class="card-text">PRICE: <button type="button" class="btn btn-warning">1200 RUPEES </button> 
+                    <br><hr>Mariam is only fifteen when she is sent to Kabul to marry Rasheed. Nearly two decades later, a friendship grows between Mariam and a local teenager, Laila, as strong as the ties between mother and daughter. When the Taliban take over, life becomes a desperate struggle against starvation, brutality and fear. Yet love can move a person to act in unexpected ways, and lead them to overcome the most daunting obstacles with a startling heroism. </p> 
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop15">
+                    More details 
+                    </button> 
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop15" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop15Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop15Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"> 
+        <h2>Preface : </h2>
+        <p>Mariam is only fifteen when she is sent to Kabul to marry Rasheed. Nearly two decades later, a friendship grows between Mariam and a local teenager, Laila, as strong as the ties between mother and daughter. When the Taliban take over, life becomes a desperate struggle against starvation, brutality and fear. Yet love can move a person to act in unexpected ways, and lead them to overcome the most daunting obstacles with a startling heroism. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>"One could not count the moons that shimmer on her roofs, Or the thousand splendid suns that hide behind her walls." <br>
+            " Like a compass needle that points north, a man’s accusing finger always finds a woman." </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Khaled Hosseini was born in Kabul, Afghanistan and moved to the United States in 1980. His first novel, The Kite Runner, was an international bestseller, published in thirty-four countries. In 2006 he was named a US goodwill envoy to the United Nations Refugee Agency. He lives in northern California. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+             
+              <div class="card-footer"> 
+                <small class="text-body-secondary">Tissues part-2 </small>
+              </div>
+            </div>
+        </div>  
+      </div> 
+    </div> 
+    <br><!--Indians v/s the system --> <hr>
+ <div><h2>Indians v/s The System : </h2>
+    <div class="row row-cols-1 row-cols-md-5 g-5">
+        <div class="col">
+          <div class="card h-100 shadow ">
+            <img src="./shyaamchi aai.JPG" class="card-img-top" alt="..." >
+            <div class="card-body">
+              <h5 class="card-title">SHYAAMCHI AAI</h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">990 RUPEES </button> 
+                <br><hr>१९५०-६० च्या दशकात ज्या पिढीने जीवनातील पहिले एक दीड दशक पूर्ण केले होते, असा आजचा एकही ज्येष्ठ नागरिक नसेल की ज्याने त्याच्या बालपणी साने गुरुजींचे 'श्यामची आई' हे पुस्तक वाचले नसेल. साने गुरुजींच्या 'श्यामची आई', 'मीरी' अशा कादंबऱ्या वाचून ज्याच्या डोळ्यांच्या कडा पाणावल्या नसतील अशी व्यक्ती विरळच. अत्यंत साधी, सरळ; पण काळजाचा ठाव घेणारी हृदयस्पर्शी भाषा हे गुरुजींच्या लिखाणाचे वैशिष्ट्य. </p> 
+
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop16">
+    More details 
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop16" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop16Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop16Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>१९५०-६० च्या दशकात ज्या पिढीने जीवनातील पहिले एक दीड दशक पूर्ण केले होते, असा आजचा एकही ज्येष्ठ नागरिक नसेल की ज्याने त्याच्या बालपणी साने गुरुजींचे 'श्यामची आई' हे पुस्तक वाचले नसेल. साने गुरुजींच्या 'श्यामची आई', 'मीरी' अशा कादंबऱ्या वाचून ज्याच्या डोळ्यांच्या कडा पाणावल्या नसतील अशी व्यक्ती विरळच. अत्यंत साधी, सरळ; पण काळजाचा ठाव घेणारी हृदयस्पर्शी भाषा हे गुरुजींच्या लिखाणाचे वैशिष्ट्य.
+            आईच्या प्रेममय थोर शिकवणुकीचे सरळ, साध्या व सुंदर संस्कृतीचे एक करुण व गोड कथात्मक चित्र म्हणजे 'श्यामची आई' असे म्हणता येईल. खुद्द गुरुजी म्हणतात की, “ही कथा लिहिताना हृदयातील सारा जिव्हाळा येथे ओतलेला आहे. या गोष्टी लिहीत असताना माझे डोळे शतवार ओले झाले होते. हृदय गहिवरून व उचंबळून आले होते. माझ्या हृदयात मातेबद्दलच्या असणाऱ्या प्रेम, भक्ती व कृतज्ञता यांच्या अपार भावना 'श्यामची आई' वाचून जर वाचकांच्या हृदयातही उत्पन्न होतील तर हे पुस्तक कृतार्थ झाले असे म्हणता येईल.
+            आपल्या मुलांवर अपार माया करणारी, त्यांनी सुसंस्कारी बनावे म्हणून झटणारी; पण हे संस्कार उपदेशाच्या डोसाच्या रूपात मुलांना न पाजता स्वत:च्या वागण्यातून व दैनंदिन छोट्याछोट्या प्रसंगातून मुलांच्या मनावर ते संस्कार बिंबवणारी आणि मुलांना शिस्त लावताना प्रसंगी कठोर बनणारी ही आदर्श 'आई' आजच्या पिढीतील उगवत्या पिढीसाठीच नव्हे तर त्यांच्या आईबाबांसाठी प्रेरक ठरेल, हे निश्चित. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p></p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Sane Guruji ontological senses of your childhood, respectively, of how it has gone, and marmikapane the conscience of the helavuna sodatila benignly described in this book is. '' I'' Shyamchi the East. The house to house Sane Guruji book is read. Reading this book is to be done or is part of a cultural. Psalm devadikanci you say, take your mulancyakaduna mhanavuna. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div>
+  </div> 
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow">
+            <img src="./godan.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">GODAAN</h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">133 RUPEES </button> 
+                <br><hr>Compelling storytelling that immerses you in the vibrant world of rural India.
+                Thought-provoking social commentary that sheds light on caste dynamics and societal injustices.
+                Memorable characters whose stories evoke empathy and reflection.
+                A powerful portrayal of the human condition and the search for meaning.
+                A must-read for those interested in Indian literature and a deeper understanding of society. </p> 
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop17">
+                More details 
+                </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop17" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop17Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop17Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>Godaan is a masterpiece of Indian literature that explores the complex themes of social inequality, rural life, and the struggles of the marginalized. Written by Munshi Premchand, this timeless novel takes you on a poignant journey through the lives of characters grappling with poverty, morality, and the pursuit of a better life.
+
+            Compelling storytelling that immerses you in the vibrant world of rural India.
+            Thought-provoking social commentary that sheds light on caste dynamics and societal injustices.
+            Memorable characters whose stories evoke empathy and reflection.
+            A powerful portrayal of the human condition and the search for meaning.
+            A must-read for those interested in Indian literature and a deeper understanding of society.</p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p></p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Born Dhanpat Rai Shrivastava on 31 July 1880 in Lamhi village near Varanasi, India, Munshi Premchand began his writing career in 1901. His first short novel, Asrar e Ma’abid (Secrets of God’s Abode), written in Urdu was published in a weekly between 8 October 1903 to February 1905. He wrote on a variety of topics including prostitution, poverty, dowry, child widowhood, and feudal system, using his works as a vehicle for arousing public awareness. He was the first Hindi author whose works featured social realism. Premchand has penned down hundreds of short stories, more than a dozen novels, plays, and several critical essays. His most celebrated works include Vardaan (1912), Seva Sadan (1918), Premashram (1922), Rangbhoomi (1925), Nirmala (1927), Pratigya (1927), Gaban (1931), Karmabhoomi (1932), Godaan (1936). Premchand breathed his last on 8 October 1936. One of the most influential writers of Indian literature, his works continue to remain popular and are translated in various foreign languages across the world. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+             
+
+            
+            <div class="card-footer">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow">
+            <img src="why am i an atheist.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">WHY AM I AN ATHEIST</h5>
+              <p class="card-text">PRICE: <button type="button" class="btn btn-warning">400 RUPEES </button> 
+                <br><hr>An excellent write up by martyr Bhagat singh. The sheer grit, determination that he possessed is ably reflected through his words. It's a must read for every Indian and especially the youth of the nation. The revolution he preached is much needed in today's time. Revolution in an individual's mind is the need to the hour. Inquilab zindabad. </p> 
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop18">
+                More details 
+                </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop18" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop18Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop18Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>Bhagat Singh is a name that became synonymous with revolution in India’s struggle for independence. This young boy brought about a change in the way people thought about freedom. He was well read and fought extensively for rights – his own, his comrades’ and his countrymen’s. A discussion with a friend soon turned into a matter of self-assessment for Bhagat Singh, leading to a discourse on why he chose to be an atheist. Even in the face of death at a very young age, his uncanny observation leads to his putting forth some pertinent questions. On another occasion, he was disappointed with his father’s plea in Court for his innocence and chose to write a letter to him. This book is a collection of eighteen of his valued writings from within the walls of prison and outside it, which show us the resolve in his words, and the bravery in his acts subsequently. </p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>"They can kill me but they cannot kill my ideas "<br> 
+            “If the deaf are to hear, then sound has to be very loud” 
+        </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Bhagat Singh (1907-31) was a revolutionary in the Indian independence struggle. Post his graduation, he worked as a writer and editor for Punjabi and Urdu newspapers, advocating Marxist theories. Having popularized the phrase ‘Inquilab Zindabad’ or ‘Long live the revolution!’, he was later given death penalty for the murder of an English officer. </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+             
+
+            
+            <div class="card-footer">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow">
+              <img src="./forest of enchantments.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">PRICE: <button type="button" class="btn btn-warning">600 RUPEES </button> 
+                    <br><hr>The Ramayana, one of the world's greatest epics, is also a tragic love story. In this brilliant retelling, Chitra Banerjee Divakaruni places Sita at the centre of the novel: this is Sita's version. The Forest of Enchantments is also a very human story of some of the other women in the epic, often misunderstood and relegated to the margins </p> 
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop19">
+                    More details 
+                    </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop19" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop19Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop19Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>The Ramayana, one of the world's greatest epics, is also a tragic love story. In this brilliant retelling, Chitra Banerjee Divakaruni places Sita at the centre of the novel: this is Sita's version. The Forest of Enchantments is also a very human story of some of the other women in the epic, often misunderstood and relegated to the margins: Kaikeyi, Surpanakha, Mandodari. A powerful comment on duty, betrayal, infidelity and honour, it is also about women's struggle to retain autonomy in a world that privileges men, as Chitra transforms an ancient story into a gripping, contemporary battle of wills. While the Ramayana resonates even today, she makes it more relevant than ever, in the underlying questions in the novel: How should women be treated by their loved ones? What are their rights in a relationship? When does a woman need to stand up and say, 'Enough!'</p> 
+        <hr><br> 
+        <h2>Quotes : </h2> 
+        <p>"How entangled love is with expectation, that poison vine! The stronger the expectation, the more our anger towards the beloved if he doesn’t fulfil it—and the less our control over ourselves. " <br>
+         <hr>   " I knew now that love—no matter how deep—wasn’t enough to transform another person: how they thought, what they believed. At best, we could only change ourselves." </p>   
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>Chitra Banerjee Divakaruni is the award-winning author of 18 books. Her themes include the Indian experience, contemporary America, women, immigration, history, myth, and the joys and challenges of living in a multicultural world. Her work has been published in over 100 magazines and anthologies and translated into 29 languages, including Dutch, Hebrew, Hindi and Japanese. She has won numerous awards, including an American
+
+            Book Award and the internation Premio Scanno Prize. Divakaruni also writes for children and young adults.
+            
+            Her latest novel is Oleander Girl (Simon and Schuster, 2013). Her upcoming novel is Before We Visit the Goddess (about 3 generations of women-- grandmother, mother and daughter-- who each examine the question "what does it mean to be a successful woman." April 2016, Simon & Schuster.)
+            
+            Two of her books, The Mistress of Spices and Sister of My Heart, have been made into movies. Her novels One Amazing Thing and Palace of Illusions have been optioned. Her collection of stories, Arranged Marriage has been made into a play.
+            
+            She was born in India and came to the United States to continue her education, receiving a Master’s degree from Wright State University in Dayton, Ohio and a Ph.D. from the University of California, Berkeley.
+            
+            She currently teaches in the nationally ranked Creative Writing program at the Univ. of Houston. She serves on the Advisory board of Maitri in the San Francisco Bay Area and Daya in Houston, organizations that help South Asian or South Asian American women in abusive situations. She is also closely involved with Pratham, an organization that helps educate children (especially those living in urban slums) in India.
+            
+            She has judged several prestigious awards, such as the National Book Award and the PEN Faulkner Award.
+            
+            She lives in Houston with her husband Murthy and has two sons, Anand and Abhay (whose names she has used in her children’s novels). </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary " onclick="console.log('forest of enchantments order')">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+             
+
+              
+              <div class="card-footer">
+                <small class="text-body-secondary">Last updated 3 mins ago</small>
+              </div>
+            </div>
+        </div> 
+        <div class="col"> 
+            <div class="card h-100 shadow">
+              <img src="./nithalle ki diary.JPG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">NITHALLE KI DIARY </h5>
+                <p class="card-text">PRICE: <button type="button" class="btn btn-warning">1100 RUPEES </button> 
+                    <br><hr>This is a classic piece of satire, witty and funny, but at the same time compels you to give a thought to the situation the society is in.
+                    Although written around half a century ago, the book still finds its relevance in present times.
+                    You'll definitely love it if you like political and social satires. </p> 
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop20">
+                    More details 
+                    </button> 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop20" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop20Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdrop20Label">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h2>Preface : </h2>
+        <p>This is a classic piece of satire, witty and funny, but at the same time compels you to give a thought to the situation the society is in.
+            Although written around half a century ago, the book still finds its relevance in present times.
+            You'll definitely love it if you like political and social satires. </p> 
+        <hr><br> 
+        <!--<h2>Quotes : </h2> 
+        <p> </p> -->  
+        <hr><br>
+        <h2>About author : </h2> 
+        <p>हरिशंकर परसाईजन्म: 22 अगस्त, 1924। जन्म-स्थान: जमानी गाँव, जिला होशंगाबाद (मध्य प्रदेश)। मध्यवित्त परिवार। दो भाई, दो बहिनें। स्वयं अविवाहित। परिवार में बहन, भानजे और भानजी।मैट्रिक नहीं हुए थे कि माँ की मृत्यु हो गई और लकड़ी के कोयले की ठेकेदारी करते पिता को असाध्य बीमारी। फलस्वरूप गहन आर्थिक अभावों के बीच पारिवारिक जिम्मेदारियाँ। यहीं से वास्तविक जीवन संघर्ष, जिसने ताकत भी दी और दुनियावी शिक्षा भी। फिर भी आगे पढ़े। नागपुर विश्वविद्यालय से हिन्दी में एम.ए.। फिर ‘डिप्लोमा इन टीचिंग’।निधन: 10 अगस्त, 1995।प्रकाशित कृतियाँ: हँसते हैं रोते हैं, जैसे उनके दिन फिरे, (कहानी-संग्रह); रानी नागफनी की कहानी, तट की खोज (उपन्यास) तथा, तब की बात और थी, भूत के पाँव पीछे, बेईमानी की परत, वैष्णव की फिसलन, पगडण्डियों का जमाना, शिकायत मुझे भी है, सदाचार का ताबीज, विकलांक श्रद्धा का दौर (सा.अ. पुरस्कार), तुलसीदास चंदन घिसैं, हम एक उम्र से वाकिफ हैं। जाने पहचाने लोग, (व्यंग्य निबंध-संग्रह)।रचनाओं के अनुवाद लगभग सभी भारतीय भाषाओं और अंग्रेजी में। मलयालम में सर्वाधिक 4 पुस्तकें।‘परसाई रचनावली’ शीर्षक से छह खंडों में संकलित रचनाएँ | </p>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Buy now </button>
+        </div>
+      </div>
+    </div> 
+  </div> 
+            </div>
+
+             
+
+              
+              <div class="card-footer">
+                <small class="text-body-secondary">Last updated 3 mins ago</small>
+              </div>
+            </div>
+        </div>  
+      </div> 
+    </div> 
+<!--footer --> 
+<footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary" >
+    <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+      <div class="row">
+        <div class="col-lg-3 mb-3">
+         <b> 
+          <ul class="list-unstyled small">
+            <li class="mb-2">Designed and built with all the love in the world by ME </a> with the help of <a href="https://youtu.be/vpAJ0s5S2t0?si=qhDypEsHd-X1M6zw">youtube reference</a>.</li>
+            Code licensed by Dnyaneshwari Gogawale 
+          </ul> <br>
+          <p><b>here on the right side are all the references used : </b> </p>
+        </div></b> 
+        
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="/">Home</a></li>
+            <li class="mb-2"><a href="/docs/5.3/">Docs</a></li>
+            <li class="mb-2"><a href="/docs/5.3/examples/">Examples</a></li>
+            <li class="mb-2"><a href="https://icons.getbootstrap.com/">Icons</a></li>
+            <li class="mb-2"><a href="https://themes.getbootstrap.com/">Themes</a></li>
+            <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
+            <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank" rel="noopener">Swag Store</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Guides</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="/docs/5.3/getting-started/">Getting started</a></li>
+            <li class="mb-2"><a href="/docs/5.3/examples/starter-template/">Starter template</a></li>
+            <li class="mb-2"><a href="/docs/5.3/getting-started/webpack/">Webpack</a></li>
+            <li class="mb-2"><a href="/docs/5.3/getting-started/parcel/">Parcel</a></li>
+            <li class="mb-2"><a href="/docs/5.3/getting-started/vite/">Vite</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Projects</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">Bootstrap 5</a></li>
+            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener">Bootstrap 4</a></li>
+            <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">Icons</a></li>
+            <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">RFS</a></li>
+            <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener">Examples repo</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </footer> 
+
+
+
+
+
+
+
+  
+  
+</script>
+<!-- custom JS -->
+<script src="./index.js"></script>
+
+<!-- data collection in spreadsheet-->
+<script> 
+    const form = document.querySelector("#form-sheet01")
+    const submitButton = document.querySelector("#submit01")
+    const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxYekn26Ic3i8NqloIRlsh1sznWb5TN0x8SDh9XccWC_RSH1r542qwuLQPm6fw4r5i8-w/exec" 
+
+    form.addEventListener('submit', e => {
+        submitButton.disabled = true
+        e.preventDefault()
+        let requestBody = new FormData(form)
+        fetch(scriptURL, { 
+                method: 'POST',
+                body: requestBody
+            })
+            .then(response => {
+                    alert("Signed in successfully", response)
+                submitButton.disabled = false
+            })
+            .catch(error => {
+                alert('Error!', error.message)
+                submitButton.disabled = false
+
+            })
+    })
+</script> 
+
+
+<!-- data collection in spreadsheet-->
+<script>
+    const form2 = document.querySelector("#form-sheet02")
+    const submitButton2 = document.querySelector("#submit02")
+    const scriptURL2 =
+    "https://script.google.com/macros/s/AKfycbwdphD65BvRpEqCXDdkjEOgi_seGjgoGwSoRkjjBjG5-Ju23sdbNKhqDApmNpfUCI_xbQ/exec" 
+
+    form2.addEventListener('submit', e => {
+        submitButton2.disabled = true
+        e.preventDefault()
+        let requestBody = new FormData(form)
+        fetch(scriptURL2, { 
+                method: 'POST',
+                body: requestBody
+            })
+            .then(response => {
+                    alert("order placed successfully ", response)
+                submitButton2.disabled = false
+            })
+            .catch(error => {
+                alert('Error!', error.message)
+                submitButton2.disabled = false
+
+//alert,math.floor,math.ceil,math.round,onclick,title 
+//let creates new variable therefore not used when reassigning value to a variable 
+//let,const,var //typeof 
+// == converts both types into the same type and then checks if true or not 
+// whereas === checks value as well as type is same or not 
+//therefore we also use !== instead of != 
+//if(boolean){}  
+//&& has a priority over || therefore when necessary use brackets 
+//localStorage only supports strings.Therefore use json.stringyfy() 
+  
+            })
+    })
+</script> 
+
+
+
+<!-- data collection in spreadsheet-->
+<script>
+    const form3 = document.querySelector("#form-sheet01")
+    const submitButton3 = document.querySelector("#submit01")
+    const scriptURL3 =
+    "https://script.google.com/macros/s/AKfycbxYekn26Ic3i8NqloIRlsh1sznWb5TN0x8SDh9XccWC_RSH1r542qwuLQPm6fw4r5i8-w/exec" 
+
+    form3.addEventListener('submit', e => 
+    {
+        submitButton3.disabled = true
+        e.preventDefault()
+        let requestBody = new FormData(form)
+        fetch(scriptURL3, { 
+                method: 'POST',
+                body: requestBody
+            })
+            .then(response => {
+                    alert("Signed in successfully.", response)
+                submitButton3.disabled = false
+            })
+            .catch(error => {
+                alert('Error!', error.message)
+                submitButton3.disabled = false
+
+            })
+    })
+</script> 
+
+  </body>
+</html> 
+
+
